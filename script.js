@@ -94,7 +94,7 @@ window.addEventListener("scroll", () => {
     navHome.classList.add("dark:text-white");
   }
 
-  if (wScroll - 150 >= about) {
+  if (wScroll - 100 >= about) {
     navHome.classList.remove("active");
     navHome.classList.add("dark:text-white");
     navAbout.classList.remove("dark:text-white");
@@ -150,10 +150,8 @@ window.addEventListener("scroll", () => {
   }
 });
 
+const loader = document.getElementById("preloader");
 
-
-const loader = document.getElementById('preloader')
-
-window.addEventListener('load', () => {
+window.addEventListener("load", () => {
   loader.style.display = "none";
-})
+});

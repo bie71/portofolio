@@ -36,6 +36,7 @@
 
     <!-- script swal fire -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <!-- <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet" /> -->
     <!-- <script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script> -->
 
@@ -72,7 +73,7 @@
 
             <nav
               id="nav-menu"
-              class="absolute right-4 top-full w-full max-w-[250px] origin-top scale-0 rounded-lg bg-white bg-opacity-70 py-5 font-medium shadow-lg transition duration-300 ease-in-out dark:bg-dark dark:shadow-slate-600 lg:static lg:block lg:max-w-full lg:scale-100 lg:rounded-none lg:bg-transparent lg:uppercase lg:shadow-none lg:dark:bg-transparent"
+              class="absolute right-4 top-full w-full max-w-[250px] origin-top-right scale-0 rounded-lg bg-white bg-opacity-70 py-5 font-medium shadow-lg transition duration-300 ease-in-out dark:bg-dark dark:shadow-slate-600 lg:static lg:block lg:max-w-full lg:scale-100 lg:rounded-none lg:bg-transparent lg:uppercase lg:shadow-none lg:dark:bg-transparent"
             >
               <ul class="block lg:flex">
                 <li class="group">
@@ -140,6 +141,7 @@
       </div>
     </header>
     <!-- end header -->
+
     <!-- background -->
     <div id="bgbg">
       <img
@@ -151,21 +153,25 @@
 
     <!-- Hero Section start -->
 
-    <section id="home" class="pt-36 dark:bg-dark">
+    <section id="home" class="pt-36 dark:bg-dark dark:bg-opacity-60">
       <div class="container">
         <div class="div-RL flex flex-wrap">
           <div class="w-full self-center px-4 lg:w-1/2">
             <h1 class="text-base font-semibold text-primary md:text-xl">
               Hallo Semua 👋, Saya
-              <span class="mt-1 block text-4xl font-bold text-dark dark:text-white lg:text-5xl"
-                >Habibi</span
-              >
+              <span
+                id="habibi"
+                class="mt-1 block text-4xl font-bold text-dark dark:text-white lg:text-5xl"
+              ></span>
             </h1>
-            <h2 class="mb-5 text-lg font-medium text-secondary lg:text-2xl">
+            <h2
+              id="skill"
+              class="mb-5 text-lg font-medium text-secondary dark:text-third lg:text-2xl"
+            >
               Web Developer |
               <span class="text-dark dark:text-white">Backend Engineer</span>
             </h2>
-            <p class="mb-8 font-medium leading-relaxed text-secondary">
+            <p class="mb-8 font-medium leading-relaxed text-secondary dark:text-third">
               Belajar Programming Itu Mudah dan
               <span class="font-semibold text-dark dark:text-white">Menyenangkan</span>
               😊
@@ -386,7 +392,7 @@
             <h2 class="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl">
               Project Terbaru
             </h2>
-            <p class="text-md font-medium text-secondary md:text-lg">
+            <p class="text-md font-medium text-secondary dark:text-third md:text-lg">
               Berikut Adalah Beberapa Project Yang Pernah Dibuat
             </p>
           </div>
@@ -413,7 +419,7 @@
               <h3 class="mt-5 mb-4 text-xl font-semibold text-dark dark:text-white">
                 Project Pertama
               </h3>
-              <p class="text-base font-medium text-secondary">
+              <p class="text-base font-medium text-secondary dark:text-third">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus maxime
                 accusamus ad?
               </p>
@@ -441,7 +447,7 @@
               <h3 class="mt-5 mb-4 text-xl font-semibold text-dark dark:text-white">
                 Project Kedua
               </h3>
-              <p class="text-base font-medium text-secondary">
+              <p class="text-base font-medium text-secondary dark:text-third">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus maxime
                 accusamus ad?
               </p>
@@ -468,7 +474,7 @@
               <h3 class="mt-5 mb-4 text-xl font-semibold text-dark dark:text-white">
                 Project Ketiga
               </h3>
-              <p class="text-base font-medium text-secondary">
+              <p class="text-base font-medium text-secondary dark:text-third">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus maxime
                 accusamus ad?
               </p>
@@ -496,7 +502,7 @@
               <h3 class="mt-5 mb-4 text-xl font-semibold text-dark dark:text-white">
                 Project Keempat
               </h3>
-              <p class="text-base font-medium text-secondary">
+              <p class="text-base font-medium text-secondary dark:text-third">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus maxime
                 accusamus ad?
               </p>
@@ -574,7 +580,7 @@
             <h2 class="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl">
               Tulisan Terkini
             </h2>
-            <p class="text-md font-medium text-secondary md:text-lg">
+            <p class="text-md font-medium text-secondary dark:text-third md:text-lg">
               Berikut Adalah Beberapa Rekomendasi Artikel Yang Bisa Dibaca
             </p>
           </div>
@@ -604,7 +610,7 @@
                     >Tips Belajar Programming</a
                   >
                 </h3>
-                <p class="mb-6 text-base font-medium text-secondary">
+                <p class="mb-6 text-base font-medium text-secondary dark:text-third">
                   Belajar pemrograman atau coding itu mudah. Serius. Ya mudah bagi saya yang sudah
                   familiar dengan beberapa bahasa pemrograman. Namun, bagi pemula apalagi yang belum
                   pernah coding belajar pemrograman itu sangat sulit.
@@ -642,7 +648,7 @@
                     >Review Tiga Keyboard Mechanical Switch dari Cherry</a
                   >
                 </h3>
-                <p class="mb-6 text-base font-medium text-secondary">
+                <p class="mb-6 text-base font-medium text-secondary dark:text-third">
                   Cherry, brand yang satu ini bisa dikatakan iconic, atau sangat menonjol di
                   bidangnya. Perusahaan ini merupakan perusahaan yang cukup tua, didirikan tahun
                   1953, atau sudah hampir 70 tahun lalu!
@@ -680,7 +686,7 @@
                     >Filosopi Kopi
                   </a>
                 </h3>
-                <p class="mb-6 text-base font-medium text-secondary">
+                <p class="mb-6 text-base font-medium text-secondary dark:text-third">
                   Filosofi Kopi - Apa yang kamu pikirkan ketika mendengar kata filosofi kopi?
                   Kata-kata Bijak? Film? atau karangan cerita Dee Lesteri? Dua kata ini merupakan
                   gabungan antara rasa dan filosofi itu sendiri dari si peminum.
@@ -700,7 +706,7 @@
     <!-- end Blog -->
 
     <!-- contact -->
-    <section id="contact" class="pt-36 pb-32 dark:bg-slate-700">
+    <section id="contact" class="pt-36 pb-32 dark:bg-slate-700 dark:bg-opacity-60">
       <div class="container">
         <div class="w-full px-4">
           <div class="mx-auto mb-16 max-w-xl text-center">
@@ -708,7 +714,7 @@
             <h2 class="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl">
               Hubungi Kami
             </h2>
-            <p class="text-md font-medium text-secondary md:text-lg">
+            <p class="text-md font-medium text-secondary dark:text-third md:text-lg">
               Silakan Isi Dengan Sesuai Format
             </p>
           </div>
@@ -992,6 +998,21 @@
     <script>
       AOS.init();
     </script>
+
+    <!-- script gasp -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/TextPlugin.min.js"></script> -->
+    <script src="/js/gsap-public/minified/gsap.min.js"></script>
+    <script src="/js/gsap-public/minified/TextPlugin.min.js"></script>
+    <script>
+      gsap.registerPlugin(TextPlugin);
+    </script>
+    <!-- <script>
+      gsap.to("#habibi", { duration: 2, delay: 1, text: "Habibi" });
+
+      gsap.from("#halo", { duration: 1, delay: 2, x: -100 });
+    </script> -->
+    <script src="js/gsap-public/mygsap.js"></script>
 
     <script src="script.js"></script>
     <script src="submitscript.js"></script>
