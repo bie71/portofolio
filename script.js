@@ -19,7 +19,7 @@ const hamburger = document.querySelector("#hamburger");
 const navMenu = document.querySelector("#nav-menu");
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("hamburger-active");
-  navMenu.classList.toggle("hidden");
+  navMenu.classList.toggle("scale-0");
 });
 
 // dark mode toggle
@@ -149,3 +149,11 @@ window.addEventListener("scroll", () => {
     navContact.classList.remove("active");
   }
 });
+
+
+
+const loader = document.getElementById('preloader')
+
+window.addEventListener('load', () => {
+  loader.style.display = "none";
+})

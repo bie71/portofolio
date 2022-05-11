@@ -43,6 +43,10 @@
   </head>
 
   <body>
+    <!-- preloader -->
+    <div id="preloader"></div>
+    <!-- akhir preloader -->
+
     <!-- Header -->
     <header class="absolute top-0 left-0 z-10 flex w-full items-center bg-transparent">
       <div class="container">
@@ -68,7 +72,7 @@
 
             <nav
               id="nav-menu"
-              class="absolute right-4 top-full hidden w-full max-w-[250px] rounded-lg bg-white py-5 font-medium shadow-lg dark:bg-dark dark:shadow-slate-600 lg:static lg:block lg:max-w-full lg:rounded-none lg:bg-transparent lg:uppercase lg:shadow-none lg:dark:bg-transparent"
+              class="absolute right-4 top-full w-full max-w-[250px] origin-top scale-0 rounded-lg bg-white bg-opacity-70 py-5 font-medium shadow-lg transition duration-300 ease-in-out dark:bg-dark dark:shadow-slate-600 lg:static lg:block lg:max-w-full lg:scale-100 lg:rounded-none lg:bg-transparent lg:uppercase lg:shadow-none lg:dark:bg-transparent"
             >
               <ul class="block lg:flex">
                 <li class="group">
@@ -136,6 +140,14 @@
       </div>
     </header>
     <!-- end header -->
+    <!-- background -->
+    <div id="bgbg">
+      <img
+        src="img/bg.png"
+        alt="bg"
+        class="fixed top-0 z-[-10000] h-screen w-full scroll-mx-0 object-cover"
+      />
+    </div>
 
     <!-- Hero Section start -->
 
@@ -168,15 +180,42 @@
             >
           </div>
 
-          <div class="w-full self-end px-4 lg:w-1/2">
+          <div class="mt-10 w-full self-end px-4 md:mt-0 lg:w-1/2">
             <div class="relative mt-10 lg:right-0 lg:mt-9">
               <img
-                src="img/avatar.png"
+                src="img/foto.png"
                 alt="foto"
-                class="relative z-10 mx-auto mb-3 max-w-full drop-shadow-md duration-500 ease-in-out hover:-translate-y-2 hover:drop-shadow-xl dark:shadow-slate-400"
+                class="relative z-10 mx-auto mb-3 max-w-full rounded-3xl drop-shadow-lg duration-500 ease-in-out hover:-translate-y-2 hover:drop-shadow-2xl dark:shadow-slate-400"
               />
 
               <span class="absolute bottom-20 left-1/2 -translate-x-1/2 md:scale-125">
+                <!-- <svg
+                  width="800"
+                  height="800"
+                  viewBox="0 0 1000 1000"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <defs>
+                    <linearGradient id="linearGradientId" gradientTransform="rotate(60 0.5 0.5)">
+                      <stop offset="0%" stop-color="#0F62FE" />
+                      <stop offset="100%" stop-color="#88caf4" />
+                    </linearGradient>
+
+                    <clipPath id="shape">
+                      <path
+                        fill="currentColor"
+                        d="M591,695.5Q274,891,294,534.5Q314,178,611,339Q908,500,591,695.5Z"
+                      ></path>
+                    </clipPath>
+                  </defs>
+
+                  <g clip-path="url(#shape)">
+                    <path
+                      fill="url(#linearGradientId)"
+                      d="M591,695.5Q274,891,294,534.5Q314,178,611,339Q908,500,591,695.5Z"
+                    />
+                  </g>
+                </svg> -->
                 <svg
                   class="drop-shadow-md"
                   width="400"
@@ -211,7 +250,7 @@
     <!-- Hero Section end -->
 
     <!-- about -->
-    <section id="about" class="pt-36 pb-32 dark:bg-dark">
+    <section id="about" class="pt-35 pb-32 dark:bg-dark">
       <div class="container">
         <div class="flex flex-wrap">
           <div class="about-left mb-10 w-full px-4 lg:w-1/2">
@@ -354,7 +393,12 @@
         </div>
 
         <div class="flex w-full flex-wrap justify-center px-4 xl:mx-auto xl:w-10/12">
-          <div class="px-4 md:w-1/2" data-aos="fade-down" data-aos-duration="1000">
+          <div
+            class="px-4 md:w-1/2"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+          >
             <div
               class="gambar mb-12 rounded-xl p-4 duration-300 ease-in-out hover:shadow-xl hover:ring-2 hover:ring-primary"
             >
@@ -376,7 +420,13 @@
             </div>
           </div>
 
-          <div class="px-4 md:w-1/2" data-aos="fade-up" data-aos-duration="1500">
+          <div
+            class="px-4 md:w-1/2"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+            data-aos-delay="100"
+          >
             <div
               class="mb-12 rounded-xl p-4 duration-300 ease-in-out hover:shadow-xl hover:ring-2 hover:ring-primary"
             >
@@ -398,7 +448,12 @@
             </div>
           </div>
 
-          <div class="px-4 md:w-1/2" data-aos="fade-up" data-aos-duration="1500">
+          <div
+            class="px-4 md:w-1/2"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+          >
             <div
               class="mb-12 rounded-xl p-4 duration-300 ease-in-out hover:shadow-xl hover:ring-2 hover:ring-primary"
             >
@@ -420,7 +475,13 @@
             </div>
           </div>
 
-          <div class="px-4 md:w-1/2" data-aos="fade-down" data-aos-duration="1000">
+          <div
+            class="px-4 md:w-1/2"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+            data-aos-delay="100"
+          >
             <div
               class="mb-12 rounded-xl p-4 duration-300 ease-in-out hover:shadow-xl hover:ring-2 hover:ring-primary"
             >
@@ -545,8 +606,8 @@
                 </h3>
                 <p class="mb-6 text-base font-medium text-secondary">
                   Belajar pemrograman atau coding itu mudah. Serius. Ya mudah bagi saya yang sudah
-                  familiar dengan beberapa bahasa pemrograman. Namun, bagi pemula—apalagi yang belum
-                  pernah coding—belajar pemrograman itu sangat sulit.
+                  familiar dengan beberapa bahasa pemrograman. Namun, bagi pemula apalagi yang belum
+                  pernah coding belajar pemrograman itu sangat sulit.
                 </p>
                 <a
                   href="https://www.petanikode.com/tips-belajar-pemrograman/"

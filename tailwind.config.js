@@ -15,6 +15,10 @@ module.exports = {
       screens: {
         "2xl": "1320px",
       },
+      spacing: {
+        '34': '132px',
+        '35': '136px',
+      }
     },
   },
   plugins: [],

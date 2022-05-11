@@ -49,3 +49,19 @@ body {
 .active {
   @apply text-primary duration-500 dark:text-primary;
 }
+
+
+#preloader {
+  background: rgba(0, 0, 0, 0.904) url(img/loading/loader2.gif) no-repeat center center;
+  background-size: 55%;
+  height: 100%;
+  width: 100%;
+  z-index: 9999;
+  position: fixed;
+}
+
+@media  screen and (min-width:770px) {
+  #preloader{
+    background-size: 35%;
+  }
+}
