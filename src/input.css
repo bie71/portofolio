@@ -50,7 +50,6 @@ body {
   @apply text-primary duration-500 dark:text-primary;
 }
 
-
 #preloader {
   background: rgba(0, 0, 0, 0.904) url(img/loading/loader2.gif) no-repeat center center;
   background-size: 55%;
@@ -60,8 +59,65 @@ body {
   position: fixed;
 }
 
-@media  screen and (min-width:770px) {
-  #preloader{
+@media screen and (min-width: 770px) {
+  #preloader {
     background-size: 35%;
+  }
+}
+
+body {
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 254, 234, 1) 0%,
+    rgba(255, 254, 234, 1) 35%,
+    #9dbfff 100%
+  );
+}
+
+.wave {
+  animation: wave 12s linear infinite;
+}
+
+.wave1 {
+  animation: wave1 14s linear infinite;
+}
+
+.wave2 {
+  animation: wave2 16s linear infinite;
+}
+
+@keyframes wave {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes wave1 {
+  0% {
+    transform: scaleY(1.2) translateX(0%);
+  }
+
+  100% {
+    transform: scaleY(1.2) translateX(100%);
+  }
+}
+
+@keyframes wave2 {
+  0% {
+    transform: scaleY(0.8) translateX(0%);
+  }
+
+  100% {
+    transform: scaleY(0.8) translateX(100%);
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .waveanimate {
+    height: 70%;
   }
 }

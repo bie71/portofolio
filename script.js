@@ -94,7 +94,7 @@ window.addEventListener("scroll", () => {
     navHome.classList.add("dark:text-white");
   }
 
-  if (wScroll - 100 >= about) {
+  if (wScroll - 135 >= about) {
     navHome.classList.remove("active");
     navHome.classList.add("dark:text-white");
     navAbout.classList.remove("dark:text-white");
