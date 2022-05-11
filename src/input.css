@@ -121,3 +121,7 @@ body {
     height: 70%;
   }
 }
+
+.imghabibi {
+  pointer-events: none;
+}

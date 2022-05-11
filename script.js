@@ -155,3 +155,11 @@ const loader = document.getElementById("preloader");
 window.addEventListener("load", () => {
   loader.style.display = "none";
 });
+
+let allImages = document.querySelectorAll("img");
+allImages.forEach((value) => {
+  value.oncontextmenu = (e) => {
+    e.preventDefault();
+    return false;
+  };
+});
