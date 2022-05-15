@@ -50,20 +50,69 @@ body {
   @apply text-primary duration-500 dark:text-primary;
 }
 
+/* awal preloader */
+:root {
+  --yellow: #feb60a;
+  --red: #ff0062;
+  --blue: #0f62fe;
+  --green: #6bcb77;
+}
+
 #preloader {
-  background: rgba(0, 0, 0, 0.904) url(img/loading/loader2.gif) no-repeat center center;
-  background-size: 55%;
+  /* background: rgba(0, 0, 0, 0.904) url(img/loading/loader1.gif) no-repeat center center;
+  background-size: 45%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000831e3;
+  background-image: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.15) 0%,
+    rgba(18, 18, 19, 0) calc(15% + 100px),
+    rgba(2, 22, 31, 0) calc(85% + 100px),
+    rgba(0, 0, 0, 0.15) 100%
+  );
   height: 100%;
   width: 100%;
   z-index: 9999;
   position: fixed;
+  background-size: 80%;
 }
 
-@media screen and (min-width: 770px) {
-  #preloader {
-    background-size: 35%;
-  }
+div#preloader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+div#preloader > div {
+  width: 2vw;
+  height: 2vw;
+  border-radius: 100%;
+  margin: 10px;
+  background-image: linear-gradient(145deg, rgba(255, 255, 255, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.yellow {
+  background-color: var(--yellow);
+  animation: yellow 1.7s 0s linear infinite;
+}
+
+.red {
+  background-color: var(--red);
+  animation: red 1.7s 0.1s linear infinite;
+}
+
+.blue {
+  background-color: var(--blue);
+  animation: blue 1.7s 0.2s linear infinite;
+}
+
+.green {
+  background-color: var(--green);
+  animation: green 1.7s 0.3s linear infinite;
+}
+
+/* akhir preloader */
 
 body {
   background: radial-gradient(
@@ -85,6 +134,12 @@ body {
 .wave2 {
   animation: wave2 16s linear infinite;
 }
+
+.imghabibi {
+  pointer-events: none;
+}
+
+/* animation wave */
 
 @keyframes wave {
   0% {
@@ -116,12 +171,94 @@ body {
   }
 }
 
+/* animation bounce */
+
+@keyframes yellow {
+  0% {
+    transform: translateY(0);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-100%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0.3;
+  }
+}
+@keyframes red {
+  0% {
+    transform: translateY(0);
+    opacity: 0.2;
+  }
+  50% {
+    transform: translateY(-100%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0.2;
+  }
+}
+@keyframes blue {
+  0% {
+    transform: translateY(0);
+    opacity: 0.1;
+  }
+  50% {
+    transform: translateY(-100%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0.1;
+  }
+}
+@keyframes green {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-100%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+
+/* media screen bg size */
 @media screen and (max-width: 1023px) {
   .waveanimate {
     height: 70%;
   }
 }
 
-.imghabibi {
-  pointer-events: none;
+@media screen and (max-width: 1375px) {
+  .medsos {
+    display: none;
+  }
+  .navnav {
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 770px) {
+  #preloader {
+    background-size: 45%;
+  }
+}
+
+div .maps {
+  width: 400px;
+  height: 350px;
+}
+
+@media screen and (max-width: 767px) {
+  div .maps {
+    width: 100%;
+  }
 }

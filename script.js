@@ -153,7 +153,11 @@ window.addEventListener("scroll", () => {
 const loader = document.getElementById("preloader");
 
 window.addEventListener("load", () => {
-  loader.style.display = "none";
+  loader.style.transitionDuration = "900ms";
+  loader.style.opacity = 0;
+  setTimeout(() => {
+    loader.style.display = "none";
+  }, 1500);
 });
 
 let allImages = document.querySelectorAll("img");
