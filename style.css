@@ -784,12 +784,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-@-webkit-keyframes pulse {
-  50% {
-    opacity: .5;
-  }
-}
-
 @keyframes pulse {
   50% {
     opacity: .5;
@@ -797,8 +791,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .animate-pulse {
-  -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-          animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
 .cursor-pointer {
@@ -824,10 +817,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .justify-around {
   justify-content: space-around;
-}
-
-.justify-evenly {
-  justify-content: space-evenly;
 }
 
 .self-end {
@@ -1381,26 +1370,22 @@ div#preloader > div {
 
 .yellow {
   background-color: var(--yellow);
-  -webkit-animation: yellow 1.7s 0s linear infinite;
-          animation: yellow 1.7s 0s linear infinite;
+  animation: yellow 1.7s 0s linear infinite;
 }
 
 .red {
   background-color: var(--red);
-  -webkit-animation: red 1.7s 0.1s linear infinite;
-          animation: red 1.7s 0.1s linear infinite;
+  animation: red 1.7s 0.1s linear infinite;
 }
 
 .blue {
   background-color: var(--blue);
-  -webkit-animation: blue 1.7s 0.2s linear infinite;
-          animation: blue 1.7s 0.2s linear infinite;
+  animation: blue 1.7s 0.2s linear infinite;
 }
 
 .green {
   background-color: var(--green);
-  -webkit-animation: green 1.7s 0.3s linear infinite;
-          animation: green 1.7s 0.3s linear infinite;
+  animation: green 1.7s 0.3s linear infinite;
 }
 
 /* akhir preloader */
@@ -1415,18 +1400,15 @@ body {
 }
 
 .wave {
-  -webkit-animation: wave 12s linear infinite;
-          animation: wave 12s linear infinite;
+  animation: wave 12s linear infinite;
 }
 
 .wave1 {
-  -webkit-animation: wave1 14s linear infinite;
-          animation: wave1 14s linear infinite;
+  animation: wave1 14s linear infinite;
 }
 
 .wave2 {
-  -webkit-animation: wave2 16s linear infinite;
-          animation: wave2 16s linear infinite;
+  animation: wave2 16s linear infinite;
 }
 
 .imghabibi {
@@ -1434,16 +1416,6 @@ body {
 }
 
 /* animation wave */
-
-@-webkit-keyframes wave {
-  0% {
-    transform: translateX(0%);
-  }
-
-  100% {
-    transform: translateX(100%);
-  }
-}
 
 @keyframes wave {
   0% {
@@ -1455,16 +1427,6 @@ body {
   }
 }
 
-@-webkit-keyframes wave1 {
-  0% {
-    transform: scaleY(1.2) translateX(0%);
-  }
-
-  100% {
-    transform: scaleY(1.2) translateX(100%);
-  }
-}
-
 @keyframes wave1 {
   0% {
     transform: scaleY(1.2) translateX(0%);
@@ -1472,16 +1434,6 @@ body {
 
   100% {
     transform: scaleY(1.2) translateX(100%);
-  }
-}
-
-@-webkit-keyframes wave2 {
-  0% {
-    transform: scaleY(0.8) translateX(0%);
-  }
-
-  100% {
-    transform: scaleY(0.8) translateX(100%);
   }
 }
 
@@ -1497,23 +1449,6 @@ body {
 
 /* animation bounce */
 
-@-webkit-keyframes yellow {
-  0% {
-    transform: translateY(0);
-    opacity: 0.3;
-  }
-
-  50% {
-    transform: translateY(-100%);
-    opacity: 1;
-  }
-
-  100% {
-    transform: translateY(0);
-    opacity: 0.3;
-  }
-}
-
 @keyframes yellow {
   0% {
     transform: translateY(0);
@@ -1528,23 +1463,6 @@ body {
   100% {
     transform: translateY(0);
     opacity: 0.3;
-  }
-}
-
-@-webkit-keyframes red {
-  0% {
-    transform: translateY(0);
-    opacity: 0.2;
-  }
-
-  50% {
-    transform: translateY(-100%);
-    opacity: 1;
-  }
-
-  100% {
-    transform: translateY(0);
-    opacity: 0.2;
   }
 }
 
@@ -1565,23 +1483,6 @@ body {
   }
 }
 
-@-webkit-keyframes blue {
-  0% {
-    transform: translateY(0);
-    opacity: 0.1;
-  }
-
-  50% {
-    transform: translateY(-100%);
-    opacity: 1;
-  }
-
-  100% {
-    transform: translateY(0);
-    opacity: 0.1;
-  }
-}
-
 @keyframes blue {
   0% {
     transform: translateY(0);
@@ -1596,23 +1497,6 @@ body {
   100% {
     transform: translateY(0);
     opacity: 0.1;
-  }
-}
-
-@-webkit-keyframes green {
-  0% {
-    transform: translateY(0);
-    opacity: 0;
-  }
-
-  50% {
-    transform: translateY(-100%);
-    opacity: 1;
-  }
-
-  100% {
-    transform: translateY(0);
-    opacity: 0;
   }
 }
 
@@ -1658,8 +1542,8 @@ body {
 }
 
 div .maps {
-  width: 400px;
-  height: 350px;
+  width: 310px;
+  height: 290px;
 }
 
 @media screen and (max-width: 767px) {
@@ -1685,8 +1569,7 @@ div .maps {
 }
 
 .hover\:animate-none:hover {
-  -webkit-animation: none;
-          animation: none;
+  animation: none;
 }
 
 .hover\:border-primary:hover {

@@ -253,8 +253,8 @@ body {
 }
 
 div .maps {
-  width: 400px;
-  height: 350px;
+  width: 310px;
+  height: 290px;
 }
 
 @media screen and (max-width: 767px) {
