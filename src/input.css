@@ -7,7 +7,7 @@ body {
 }
 
 .navbar-fixed {
-  @apply fixed z-[999] bg-white bg-opacity-70 drop-shadow-md backdrop-blur-sm transition duration-300 dark:bg-dark dark:bg-opacity-70;
+  @apply fixed z-[9999] bg-white bg-opacity-70 drop-shadow-md backdrop-blur-sm transition duration-300 dark:bg-dark dark:bg-opacity-70;
 }
 
 .hamburger-line {
