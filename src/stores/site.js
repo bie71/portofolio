@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia';
 import { computed, ref, watch } from 'vue';
 
-const STORAGE_KEY = 'portfolio-site-data-v5';
+const STORAGE_KEY = 'portfolio-site-data-v6';
 const THEME_KEY = 'portfolio-theme';
 
 const defaultSiteData = {
