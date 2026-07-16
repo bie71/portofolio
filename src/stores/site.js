@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia';
 import { computed, ref, watch } from 'vue';
 
-const STORAGE_KEY = 'portfolio-site-data-v1';
+const STORAGE_KEY = 'portfolio-site-data-v5';
 const THEME_KEY = 'portfolio-theme';
 
 const defaultSiteData = {
@@ -13,7 +13,6 @@ const defaultSiteData = {
     { label: 'Beranda', target: 'home' },
     { label: 'Tentang Saya', target: 'about' },
     { label: 'Portfolio', target: 'portfolio' },
-    { label: 'Clients', target: 'clients' },
     { label: 'Blog', target: 'blog' },
     { label: 'Contact', target: 'contact' },
   ],
@@ -25,27 +24,27 @@ const defaultSiteData = {
     { id: 'linkedin', label: 'LinkedIn', url: 'https://www.linkedin.com/in/77habibi/', icon: 'linkedin' },
   ],
   hero: {
-    greeting: 'Hallo Semua 👋, Saya',
+    greeting: 'Halo Semua 👋, Saya',
     name: 'Habibi',
-    roles: ['Web Developer', 'Backend Developer'],
-    subtitle: 'Belajar Programming Itu Mudah dan Menyenangkan 😊',
-    description: 'Belajar Programming Itu Mudah dan Menyenangkan 😊',
+    roles: ['Software Developer'],
+    subtitle: 'Membangun aplikasi mobile offline-first dan sistem backend tangguh.',
+    description: 'Membangun aplikasi mobile offline-first, sistem pelacakan real-time, dan arsitektur backend tangguh yang siap mendukung skala bisnis Anda.',
     cta: {
-      text: 'Hubungi Saya',
-      href: 'https://api.whatsapp.com/send?phone=6285777537687&text=Assalaamualaikum',
-      icon: '/img/icon/wa.svg',
+      text: 'Hubungi via Email',
+      href: 'mailto:bie77.habibi@gmail.com?subject=Tawaran%20Kolaborasi',
+      icon: '/img/icon/gmail.svg',
     },
     heroImage: '/img/boy.png',
     backgroundShapeColor: '#0F62FE',
   },
   about: {
     title: 'Tentang Saya',
-    heading: 'Yuk, Belajar Pemograman 😊',
+    heading: 'Menghubungkan Ide Bisnis dengan Solusi Perangkat Lunak',
     description:
-      'Saya Adalah Seorang Yang Sedang Ingin Berkembang Belajar Pemograman Baik Itu Frontend ataupun Backend. Saat ini saya menggunakan teknologi NodeJs dan Golang Sebagai Bahasa Backend. Dan juga Menggunakan Bootstrap, Materialize CSS, dan Tailwind CSS Sebagai Framewrok Frontend.',
-    friendTitle: 'Mari Berteman 🤝',
+      'Saya adalah Software Engineer yang berdedikasi membangun aplikasi web dan mobile berskala produksi. Dengan spesialisasi di Golang, Node.js, dan React Native, saya merancang arsitektur aplikasi bersih (Clean Architecture), sistem sinkronisasi asinkron, pelacakan lokasi real-time, serta basis data offline-first yang andal untuk menyelesaikan masalah nyata.',
+    friendTitle: 'Mari Berkolaborasi 🤝',
     friendDescription:
-      'Hubungi Saya Melalui Platform Yang Tersedia Dibawah, Atau Jika Ingin Menghubungi Melalui Whatsapp Silakan klik Tombol Hubungi Saya Diatas Ya.',
+      'Apakah Anda memiliki ide produk menarik, membutuhkan pengembang untuk memperkuat tim Anda, atau sekadar ingin berdiskusi teknologi? Hubungi saya sekarang.',
   },
   portfolio: {
     title: 'Portfolio',
@@ -54,34 +53,59 @@ const defaultSiteData = {
     items: [
       {
         id: 'project-1',
-        title: 'Project Pertama',
-        description: 'Membuat Web PortFolio. Yaitu Web Ini Sendiri',
+        title: 'Personal Web Portfolio',
+        description: 'Web portfolio modern berbasis Vue 3 dan Tailwind CSS dengan dark mode, custom GSAP animations, dan bento grid layout yang responsif.',
         image: '/img/foto/web-portofolio.png',
-        link: 'https://bie71.github.io/portofolio/',
+        link: 'https://github.com/bie71/portofolio',
+        tags: ['Vue 3', 'Vite', 'Tailwind CSS', 'GSAP', 'AOS'],
       },
       {
         id: 'project-2',
-        title: 'Project Kedua',
-        description:
-          'Open Music Api. Memiliki Fitur Authentication & Authoriezation, Collaboration, Upload image, dan Export Album. Menggunakan Teknologi JWT (json web token) sebagai autentikasi, Posgresql dan Redis.',
+        title: 'Open Music API',
+        description: 'RESTful API untuk platform musik dengan fitur autentikasi JWT, kolaborasi, unggah gambar, dan ekspor album berbasis antrean pesan.',
         image: '/img/foto/Open-music-api.png',
         link: 'https://github.com/bie71/open_music_api',
+        tags: ['Node.js', 'PostgreSQL', 'Redis', 'JWT', 'RabbitMQ'],
       },
       {
         id: 'project-3',
-        title: 'Project Ketiga',
-        description:
-          'Aplication Game Store. Yaitu Sebuah Aplikasi yang dapat menggenerate Kode Kupon Otomatis dengan pembelian jumlah tertentu yang Owner inginkan. Teradapat Fitur Authentication & Authoriezation, Input Prefix kode, minimum pembelian, dan kriteria. Pada Aplikasi ini diterapkan Clean Architecture agar dapat mendevelopment lebih mudah. Aplikasi ini menggunakan bahasa Pemograman Golang (GO).',
+        title: 'Application Game Store',
+        description: 'Aplikasi pengelola kupon game otomatis dengan arsitektur bersih (Clean Architecture) untuk pembuatan prefix kode, kriteria diskon, dan minimum pembelian.',
         image: '/img/foto/Game-store.png',
         link: 'https://github.com/bie71/assignment-final-project',
+        tags: ['Golang', 'Clean Arch', 'PostgreSQL', 'Gorm'],
       },
       {
         id: 'project-4',
-        title: 'Project Keempat',
-        description:
-          'eMeeting adalah aplikasi booking ruang rapat yang dibangun menggunakan bahasa Go dengan framework Fiber dan konfigurasi menggunakan Viper. Data disimpan di database PostgreSQL, sementara pengujian API dilakukan melalui Postman dengan backend cloud Supabase. Dokumentasi API disediakan lengkap menggunakan Swagger.',
+        title: 'eMeeting - Room Booking System',
+        description: 'Sistem pemesanan ruang rapat tangguh dengan Fiber router, integrasi Supabase Database, konfigurasi Viper, dan dokumentasi Swagger UI otomatis.',
         image: '/img/foto/emeeting.png',
         link: 'https://github.com/bie71/e-meeting',
+        tags: ['Golang', 'Fiber', 'Supabase', 'Swagger', 'Postman'],
+      },
+      {
+        id: 'project-5',
+        title: 'Gudang App',
+        description: 'Aplikasi inventori offline-first dengan progres stok visual, asisten profit margin cerdas (AI), sinkronisasi asinkron 2 arah Google Sheets, dan pelaporan PDF/CSV.',
+        image: '/img/foto/gudang-app.png',
+        link: 'https://github.com/bie71/gudang-app',
+        tags: ['React Native', 'Expo', 'SQLite', 'Google Sheets', 'PDF Export'],
+      },
+      {
+        id: 'project-6',
+        title: 'KumpulKuy Meetup Coordinator',
+        description: 'Platform koordinasi janji temu real-time terintegrasi LeafletJS Map, rute jalan OSRM, pelacakan GPS latar belakang, dan obrolan grup dengan status centang baca (✓✓).',
+        image: '/img/foto/kumpulkuy.png',
+        link: 'https://github.com/bie71/kumpulkuy',
+        tags: ['React Native', 'Expo SDK 57', 'Supabase Realtime', 'LeafletJS', 'OSRM API'],
+      },
+      {
+        id: 'project-7',
+        title: 'SmartSeller Lite',
+        description: 'Manajer pesanan ritel & dropship untuk melacak transaksi penjualan harian, mengoordinasikan pesanan supplier, dan menganalisis performa laba bersih.',
+        image: '/img/foto/smartseller.png',
+        link: 'https://github.com/bie71/smartseller-lite',
+        tags: ['Vue 3', 'Golang', 'PostgreSQL', 'Dropship Management'],
       },
     ],
   },
@@ -298,7 +322,7 @@ const loadData = () => {
 
 const loadTheme = () => {
   if (typeof window === 'undefined') {
-    return 'light';
+    return 'dark';
   }
 
   const stored = window.localStorage.getItem(THEME_KEY);
@@ -306,11 +330,7 @@ const loadTheme = () => {
     return stored;
   }
 
-  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    return 'dark';
-  }
-
-  return 'light';
+  return 'dark';
 };
 
 const deepEqual = (a, b) => JSON.stringify(a) === JSON.stringify(b);

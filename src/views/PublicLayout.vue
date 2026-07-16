@@ -7,7 +7,6 @@
       <HeroSection />
       <AboutSection />
       <PortfolioSection />
-      <ClientsSection />
       <BlogSection />
       <ContactSection />
     </main>
@@ -24,7 +23,6 @@ import BackgroundWave from '../components/BackgroundWave.vue';
 import HeroSection from '../components/HeroSection.vue';
 import AboutSection from '../components/AboutSection.vue';
 import PortfolioSection from '../components/PortfolioSection.vue';
-import ClientsSection from '../components/ClientsSection.vue';
 import BlogSection from '../components/BlogSection.vue';
 import ContactSection from '../components/ContactSection.vue';
 import FooterSection from '../components/FooterSection.vue';

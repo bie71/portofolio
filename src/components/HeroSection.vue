@@ -22,11 +22,9 @@
 
           <a
             :href="store.data.hero.cta.href"
-            target="_blank"
-            rel="noopener noreferrer"
             class="inline-flex items-center rounded-xl bg-primary py-3 px-8 text-base font-semibold text-white shadow-sm transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg"
           >
-            <img :src="ctaIconUrl" alt="whatsapp" class="-ml-4 mr-2 w-11" />
+            <img :src="ctaIconUrl" alt="email" class="-ml-2 mr-3 w-6 h-6 object-contain" />
             {{ store.data.hero.cta.text }}
           </a>
         </div>
